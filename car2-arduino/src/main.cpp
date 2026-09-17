@@ -1,7 +1,6 @@
 #include <Arduino.h>
 
 // TB6612FNG -> ELEGOO Arduino Uno pin connections.
-// D5 and D6 are hardware-PWM pins used for motor speed control.
 #define STBY 8
 
 #define AIN1 2
@@ -12,7 +11,7 @@
 #define BIN2 7
 #define PWMB 6
 
-// Uno analogWrite() uses 0..255. Start at a conservative power level.
+// Uno analogWrite() uses 0..255. This starts below full power.
 constexpr uint8_t TEST_SPEED = 100;
 
 uint8_t safePwmSpeed(uint8_t speed) {
