@@ -183,7 +183,7 @@ void driveBackward() {
 
 void turnLeft() {
   digitalWrite(STBY, LOW);
-  motorAReverse(MOTOR_SPEED);
+  motorAStop();
   motorBForward(MOTOR_SPEED);
   beginMovement();
 }
@@ -191,7 +191,7 @@ void turnLeft() {
 void turnRight() {
   digitalWrite(STBY, LOW);
   motorAForward(MOTOR_SPEED);
-  motorBReverse(MOTOR_SPEED);
+  motorBStop();
   beginMovement();
 }
 
