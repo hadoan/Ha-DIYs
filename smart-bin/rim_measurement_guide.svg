@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#155e75"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #17324d; }
+      .title { font-size: 35px; font-weight: 700; }
+      .head { font-size: 25px; font-weight: 700; }
+      .label { font-size: 23px; font-weight: 700; }
+      .note { font-size: 20px; }
+      .dim { stroke: #155e75; stroke-width: 3; marker-start: url(#arrow); marker-end: url(#arrow); }
+      .guide { stroke: #155e75; stroke-width: 2; stroke-dasharray: 5 5; }
+    </style>
+  </defs>
+  <rect width="1200" height="760" fill="#f4f8fb"/>
+  <text x="50" y="62" class="title">Measure the fixed rear rim (millimetres)</text>
+  <text x="50" y="100" class="note">Schematic only — use your bin's actual edges, not the drawing scale.</text>
+
+  <rect x="45" y="130" width="530" height="500" rx="18" fill="#fff" stroke="#cad9e3" stroke-width="2"/>
+  <text x="75" y="175" class="head">1. Look down, lid open</text>
+  <text x="75" y="205" class="note">Measure the white stationary lip.</text>
+  <rect x="125" y="285" width="360" height="180" rx="24" fill="#e2e9ed" stroke="#788995" stroke-width="4"/>
+  <rect x="220" y="355" width="265" height="110" fill="#fff" stroke="#788995" stroke-width="4"/>
+  <text x="271" y="502" class="note">inside opening</text>
+  <path d="M125 310 V235 M220 360 V235" class="guide"/>
+  <path d="M135 245 H210" class="dim"/>
+  <text x="147" y="232" class="label">A</text>
+  <text x="75" y="548" class="note">A = lip width, outside edge to inside edge</text>
+  <text x="75" y="580" class="note">at the proposed mounting position.</text>
+
+  <rect x="625" y="130" width="530" height="500" rx="18" fill="#fff" stroke="#cad9e3" stroke-width="2"/>
+  <text x="655" y="175" class="head">2. Side view, lid open</text>
+  <text x="655" y="205" class="note">Measure the fixed wall beneath the lip.</text>
+  <path d="M720 310 H985 V370 H915 V505 H865 V370 H720 Z" fill="#e2e9ed" stroke="#788995" stroke-width="4"/>
+  <text x="687" y="294" class="note">outside</text>
+  <text x="1010" y="405" class="note">inside</text>
+  <path d="M865 430 H805 M915 430 H805" class="guide"/>
+  <path d="M865 440 H915" class="dim"/>
+  <text x="877" y="426" class="label">B</text>
+  <path d="M960 370 H1000 M960 505 H1000" class="guide"/>
+  <path d="M990 380 V495" class="dim"/>
+  <text x="1010" y="450" class="label">C</text>
+  <text x="655" y="548" class="note">B = straight wall thickness</text>
+  <text x="655" y="580" class="note">C = usable straight height below lip</text>
+
+  <rect x="45" y="655" width="1110" height="70" rx="14" fill="#dceef2"/>
+  <text x="68" y="686" class="note">Also take a side photo with a ruler while the lid is nearly closed.</text>
+  <text x="68" y="712" class="note">Remove the black test coupon first. Do not force the lid against it.</text>
+</svg>

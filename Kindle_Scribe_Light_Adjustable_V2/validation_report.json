@@ -1,0 +1,404 @@
+{
+  "version": "2.0",
+  "device_mm": [
+    196,
+    230,
+    5.7
+  ],
+  "device_case": "bare / no cover",
+  "angles_deg": [
+    8,
+    12,
+    16,
+    20
+  ],
+  "slot_positions": {
+    "8": {
+      "y": 269.08923370763563,
+      "z": 7.5,
+      "upper_y": 198.13146919838152,
+      "upper_z": 34.721235384332566,
+      "brace_angle_deg": -20.988106578481258
+    },
+    "12": {
+      "y": 260.1650480895629,
+      "z": 7.5,
+      "upper_y": 195.8043393408907,
+      "upper_z": 47.91904463700979,
+      "brace_angle_deg": -32.12915265741781
+    },
+    "16": {
+      "y": 246.61823637084441,
+      "z": 7.5,
+      "upper_y": 192.56224562015723,
+      "upper_z": 60.92237231686384,
+      "brace_angle_deg": -44.6622274430115
+    },
+    "20": {
+      "y": 225.80832473921095,
+      "z": 7.5,
+      "upper_y": 188.42098319089442,
+      "upper_z": 73.6678675185284,
+      "brace_angle_deg": -60.531913159260405
+    }
+  },
+  "parts": [
+    {
+      "file": "01_honeycomb_deck_print_1.stl",
+      "copies": 1,
+      "print_bounds_mm": [
+        219.0,
+        242.0,
+        14.498
+      ],
+      "solid_volume_cm3": 114.346,
+      "solid_PLA_g_at_1_24": 141.79,
+      "watertight": true,
+      "single_solid": true
+    },
+    {
+      "file": "02_notched_base_print_1.stl",
+      "copies": 1,
+      "print_bounds_mm": [
+        194.0,
+        278.0,
+        12.498
+      ],
+      "solid_volume_cm3": 47.98,
+      "solid_PLA_g_at_1_24": 59.5,
+      "watertight": true,
+      "single_solid": true
+    },
+    {
+      "file": "03_folding_U_brace_print_1.stl",
+      "copies": 1,
+      "print_bounds_mm": [
+        194.0,
+        84.2,
+        6.2
+      ],
+      "solid_volume_cm3": 17.662,
+      "solid_PLA_g_at_1_24": 21.9,
+      "watertight": true,
+      "single_solid": true
+    },
+    {
+      "file": "04_bottom_stop_print_2.stl",
+      "copies": 2,
+      "print_bounds_mm": [
+        18.0,
+        9.5,
+        7.2
+      ],
+      "solid_volume_cm3": 0.581,
+      "solid_PLA_g_at_1_24": 0.72,
+      "watertight": true,
+      "single_solid": true
+    },
+    {
+      "file": "05_lower_pen_cradle_print_1.stl",
+      "copies": 1,
+      "print_bounds_mm": [
+        26.0,
+        14.2,
+        26.0
+      ],
+      "solid_volume_cm3": 3.008,
+      "solid_PLA_g_at_1_24": 3.73,
+      "watertight": true,
+      "single_solid": true
+    },
+    {
+      "file": "06_upper_pen_cradle_print_1.stl",
+      "copies": 1,
+      "print_bounds_mm": [
+        26.0,
+        10.5,
+        24.0
+      ],
+      "solid_volume_cm3": 1.895,
+      "solid_PLA_g_at_1_24": 2.35,
+      "watertight": true,
+      "single_solid": true
+    },
+    {
+      "file": "TEST_A_hinge_deck_half.stl",
+      "copies": 0,
+      "print_bounds_mm": [
+        24.0,
+        18.0,
+        14.498
+      ],
+      "solid_volume_cm3": 1.97,
+      "solid_PLA_g_at_1_24": 2.44,
+      "watertight": true,
+      "single_solid": true
+    },
+    {
+      "file": "TEST_B_hinge_base_half.stl",
+      "copies": 0,
+      "print_bounds_mm": [
+        14.0,
+        18.0,
+        12.498
+      ],
+      "solid_volume_cm3": 1.202,
+      "solid_PLA_g_at_1_24": 1.49,
+      "watertight": true,
+      "single_solid": true
+    }
+  ],
+  "density_assumption_g_cm3": 1.24,
+  "mass_method": "solid mesh volume times assumed density; not a slicer prediction",
+  "physical_testing": "Earlier 9.4 mm upper cradle passed user pen-fit test; extended holders and closed lower ring untested",
+  "fea": "none",
+  "assembly_collision_checks": {
+    "8": [],
+    "12": [],
+    "16": [],
+    "20": [],
+    "0": []
+  },
+  "total_solid_PLA_g": 230.71,
+  "total_solid_volume_cm3": 186.053,
+  "sampled_motion_checks": [
+    {
+      "stage": "folded brace; deck lifting/lowering",
+      "deck_deg": 0,
+      "brace_absolute_deg": 180,
+      "overlaps": []
+    },
+    {
+      "stage": "folded brace; deck lifting/lowering",
+      "deck_deg": 5,
+      "brace_absolute_deg": 185,
+      "overlaps": []
+    },
+    {
+      "stage": "folded brace; deck lifting/lowering",
+      "deck_deg": 10,
+      "brace_absolute_deg": 190,
+      "overlaps": []
+    },
+    {
+      "stage": "folded brace; deck lifting/lowering",
+      "deck_deg": 15,
+      "brace_absolute_deg": 195,
+      "overlaps": []
+    },
+    {
+      "stage": "folded brace; deck lifting/lowering",
+      "deck_deg": 20,
+      "brace_absolute_deg": 200,
+      "overlaps": []
+    },
+    {
+      "stage": "folded brace; deck lifting/lowering",
+      "deck_deg": 25,
+      "brace_absolute_deg": 205,
+      "overlaps": []
+    },
+    {
+      "stage": "folded brace; deck lifting/lowering",
+      "deck_deg": 30,
+      "brace_absolute_deg": 210,
+      "overlaps": []
+    },
+    {
+      "stage": "folded brace; deck lifting/lowering",
+      "deck_deg": 35,
+      "brace_absolute_deg": 215,
+      "overlaps": []
+    },
+    {
+      "stage": "folded brace; deck lifting/lowering",
+      "deck_deg": 40,
+      "brace_absolute_deg": 220,
+      "overlaps": []
+    },
+    {
+      "stage": "folded brace; deck lifting/lowering",
+      "deck_deg": 45,
+      "brace_absolute_deg": 225,
+      "overlaps": []
+    },
+    {
+      "stage": "brace swings under raised deck",
+      "deck_deg": 45,
+      "brace_absolute_deg": 225,
+      "overlaps": []
+    },
+    {
+      "stage": "brace swings under raised deck",
+      "deck_deg": 45,
+      "brace_absolute_deg": 240,
+      "overlaps": []
+    },
+    {
+      "stage": "brace swings under raised deck",
+      "deck_deg": 45,
+      "brace_absolute_deg": 255,
+      "overlaps": []
+    },
+    {
+      "stage": "brace swings under raised deck",
+      "deck_deg": 45,
+      "brace_absolute_deg": 270,
+      "overlaps": []
+    },
+    {
+      "stage": "brace swings under raised deck",
+      "deck_deg": 45,
+      "brace_absolute_deg": 285,
+      "overlaps": []
+    },
+    {
+      "stage": "brace swings under raised deck",
+      "deck_deg": 45,
+      "brace_absolute_deg": 300,
+      "overlaps": []
+    },
+    {
+      "stage": "brace swings under raised deck",
+      "deck_deg": 45,
+      "brace_absolute_deg": 315,
+      "overlaps": []
+    },
+    {
+      "stage": "brace swings under raised deck",
+      "deck_deg": 45,
+      "brace_absolute_deg": 330,
+      "overlaps": []
+    },
+    {
+      "stage": "brace swings under raised deck",
+      "deck_deg": 45,
+      "brace_absolute_deg": 340,
+      "overlaps": []
+    },
+    {
+      "stage": "8deg slot entry / exit",
+      "deck_deg": 11,
+      "brace_absolute_deg": -17.16,
+      "overlaps": []
+    },
+    {
+      "stage": "8deg slot entry / exit",
+      "deck_deg": 10,
+      "brace_absolute_deg": -18.6572,
+      "overlaps": []
+    },
+    {
+      "stage": "8deg slot entry / exit",
+      "deck_deg": 9,
+      "brace_absolute_deg": -19.9195,
+      "overlaps": []
+    },
+    {
+      "stage": "8deg slot entry / exit",
+      "deck_deg": 8.5,
+      "brace_absolute_deg": -20.4761,
+      "overlaps": []
+    },
+    {
+      "stage": "8deg slot entry / exit",
+      "deck_deg": 8,
+      "brace_absolute_deg": -20.9881,
+      "overlaps": []
+    },
+    {
+      "stage": "12deg slot entry / exit",
+      "deck_deg": 15,
+      "brace_absolute_deg": -28.6306,
+      "overlaps": []
+    },
+    {
+      "stage": "12deg slot entry / exit",
+      "deck_deg": 14,
+      "brace_absolute_deg": -29.924,
+      "overlaps": []
+    },
+    {
+      "stage": "12deg slot entry / exit",
+      "deck_deg": 13,
+      "brace_absolute_deg": -31.0858,
+      "overlaps": []
+    },
+    {
+      "stage": "12deg slot entry / exit",
+      "deck_deg": 12.5,
+      "brace_absolute_deg": -31.6216,
+      "overlaps": []
+    },
+    {
+      "stage": "12deg slot entry / exit",
+      "deck_deg": 12,
+      "brace_absolute_deg": -32.1292,
+      "overlaps": []
+    },
+    {
+      "stage": "16deg slot entry / exit",
+      "deck_deg": 19,
+      "brace_absolute_deg": -41.3199,
+      "overlaps": []
+    },
+    {
+      "stage": "16deg slot entry / exit",
+      "deck_deg": 18,
+      "brace_absolute_deg": -42.5197,
+      "overlaps": []
+    },
+    {
+      "stage": "16deg slot entry / exit",
+      "deck_deg": 17,
+      "brace_absolute_deg": -43.6321,
+      "overlaps": []
+    },
+    {
+      "stage": "16deg slot entry / exit",
+      "deck_deg": 16.5,
+      "brace_absolute_deg": -44.1571,
+      "overlaps": []
+    },
+    {
+      "stage": "16deg slot entry / exit",
+      "deck_deg": 16,
+      "brace_absolute_deg": -44.6622,
+      "overlaps": []
+    },
+    {
+      "stage": "20deg slot entry / exit",
+      "deck_deg": 23,
+      "brace_absolute_deg": -57.2882,
+      "overlaps": []
+    },
+    {
+      "stage": "20deg slot entry / exit",
+      "deck_deg": 22,
+      "brace_absolute_deg": -58.43,
+      "overlaps": []
+    },
+    {
+      "stage": "20deg slot entry / exit",
+      "deck_deg": 21,
+      "brace_absolute_deg": -59.5105,
+      "overlaps": []
+    },
+    {
+      "stage": "20deg slot entry / exit",
+      "deck_deg": 20.5,
+      "brace_absolute_deg": -60.0285,
+      "overlaps": []
+    },
+    {
+      "stage": "20deg slot entry / exit",
+      "deck_deg": 20,
+      "brace_absolute_deg": -60.5319,
+      "overlaps": []
+    }
+  ],
+  "sampled_motion_passed": true,
+  "checks_limitations": "Finite sampled positions only; no continuous swept-volume proof, no manufacturing tolerance simulation, no fastener/contact-pad model, no FEA or physical test.",
+  "original_solid_volume_cm3": 487.768,
+  "CAD_solid_volume_reduction_percent": 61.86
+}

@@ -1,8 +1,15 @@
-# ESP32-S2 OLED test
+# ESP32-S2 OLED, servo, and Wi-Fi test
 
-Scans the I²C bus on GPIO33/GPIO35 and displays `HELLO!` on a 128 × 64
-SSD1306 OLED found at address `0x3C` or `0x3D`. The scan result is printed to
-USB serial at 115200 baud every two seconds.
+Initializes the OLED on GPIO33/GPIO35, then moves a servo on GPIO1 through
+45°, 90°, 135°, and 90°, pausing one second at each position. A 128 × 64
+SSD1306 OLED at address `0x3C` or `0x3D` shows the requested angle. The I²C
+initialization result and servo angles are printed to USB serial at 115200 baud.
+The board also creates a password-protected Wi-Fi hotspot named `ha-d-1`.
+This hotspot does not provide Internet access.
+
+Before building, copy `src/wifi_password.example.h` to `src/wifi_password.h`
+and set a password of 8–63 characters. The local password file is ignored by
+Git.
 
 ## Wiring
 
@@ -12,6 +19,10 @@ USB serial at 115200 baud every two seconds.
 | SCL | GPIO35 |
 | GND | GND |
 | VCC | Supply voltage specified for your OLED module |
+
+Connect the servo signal wire to GPIO1. Power the servo from a supply that
+matches its voltage and current requirements; connect that supply's ground to
+the ESP32-S2 ground. Do not power the servo from the ESP32-S2's 3.3 V pin.
 
 Check the exact ESP32-S2 board before using GPIO33 and GPIO35: some boards use
 these pins for flash. If your board does, change `SDA_PIN` and `SCL_PIN` in

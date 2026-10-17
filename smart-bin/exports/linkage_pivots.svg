@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="790" viewBox="0 0 1300 790">
+  <defs>
+    <marker id="tip" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#0f766e"/></marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#102034}
+      .title{font-size:34px;font-weight:bold}.subtitle{font-size:19px}
+      .label{font-size:21px;font-weight:bold}.small{font-size:17px}
+      .pivot{fill:#fff;stroke:#0f766e;stroke-width:7}
+      .leader{stroke:#0f766e;stroke-width:3;fill:none;marker-end:url(#tip)}
+    </style>
+  </defs>
+  <rect width="1300" height="790" fill="#f8fafc"/>
+  <text x="45" y="55" class="title">Smart bin linkage: the rods pivot at their ends</text>
+  <text x="45" y="88" class="subtitle">Side-view diagram · positions are illustrative, not a measured motion pose</text>
+
+  <!-- Fixed side structure and servo -->
+  <rect x="60" y="560" width="1150" height="34" rx="8" fill="#cbd5e1"/>
+  <text x="70" y="626" class="small">Stationary bin / rear mount</text>
+  <rect x="145" y="429" width="118" height="128" rx="12" fill="#2563eb" stroke="#1d4ed8" stroke-width="4"/>
+  <text x="160" y="498" class="label" fill="white">SERVO</text>
+  <path d="M200 443 L265 412" stroke="#eab308" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="200" cy="443" r="11" fill="#fff" stroke="#a16207" stroke-width="5"/>
+
+  <!-- Crank support and rigid 3-hole crank -->
+  <path d="M460 560 L460 346" stroke="#3b82f6" stroke-width="34" stroke-linecap="round"/>
+  <path d="M390 405 L460 335 L524 242" stroke="#7c3aed" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Lower and upper rigid rods -->
+  <path d="M265 412 L390 405" stroke="#f97316" stroke-width="22" stroke-linecap="round"/>
+  <path d="M524 242 L798 347" stroke="#f97316" stroke-width="22" stroke-linecap="round"/>
+
+  <!-- Lid and its original side hinge -->
+  <circle cx="745" cy="561" r="14" fill="#475569"/>
+  <path d="M745 561 L1032 188" stroke="#94a3b8" stroke-width="28" stroke-linecap="round"/>
+  <path d="M798 347 L815 326" stroke="#475569" stroke-width="18"/>
+  <text x="1020" y="168" class="label">LID</text>
+
+  <!-- Rotating joints -->
+  <circle cx="265" cy="412" r="13" class="pivot"/>
+  <circle cx="390" cy="405" r="13" class="pivot"/>
+  <circle cx="460" cy="335" r="13" class="pivot"/>
+  <circle cx="524" cy="242" r="13" class="pivot"/>
+  <circle cx="798" cy="347" r="13" class="pivot"/>
+  <circle cx="745" cy="561" r="13" class="pivot"/>
+
+  <!-- Callouts -->
+  <text x="76" y="274" class="label">A · Horn → 65 mm rod</text>
+  <path d="M229 285 L264 394" class="leader"/>
+  <text x="220" y="153" class="label">B · 65 mm rod → short crank arm</text>
+  <path d="M410 161 L391 385" class="leader"/>
+  <text x="516" y="413" class="label">C · Crank turns on fixed support</text>
+  <path d="M534 403 L473 346" class="leader"/>
+  <text x="610" y="224" class="label">D · Long crank arm → 40 mm rod</text>
+  <path d="M619 233 L542 243" class="leader"/>
+  <text x="873" y="384" class="label">E · Rod → lid pad</text>
+  <path d="M872 390 L813 355" class="leader"/>
+  <text x="811" y="533" class="label">F · Original lid hinge</text>
+  <path d="M819 538 L761 559" class="leader"/>
+
+  <rect x="47" y="665" width="1206" height="92" rx="14" fill="#e0f2f1" stroke="#0f766e" stroke-width="2"/>
+  <circle cx="83" cy="711" r="12" class="pivot"/>
+  <text x="108" y="704" class="small">Green rings = free rotation around the pin axis.</text>
+  <text x="108" y="730" class="small">Pin head + clip prevent sideways escape; spacers set the gap. Rods and the purple crank arms stay rigid.</text>
+</svg>

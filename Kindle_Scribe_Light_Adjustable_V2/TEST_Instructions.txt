@@ -1,0 +1,34 @@
+KINDLE SCRIBE V2 - PRINT THE TEST PARTS FIRST
+
+For just the two revised pen holders, open
+Kindle_Scribe_V2_Pen_Holders_Only_XPlus5.3mf. Both are on one plate.
+
+Open Kindle_Scribe_V2_Complete_XPlus5.3mf in QIDI Studio. Plate 1 has
+both new 24 mm pen holders plus the two hinge coupons. If the hinges
+already passed, print just the holders from this plate. The standalone
+Kindle_Scribe_V2_Pen_Cradle_9p4mm_Test.3mf has only the upper holder.
+
+Print 1 of each supplied STL, at 100% scale in millimetres.
+Keep their supplied orientations. 0.4 mm nozzle, 0.20 mm layer height,
+4 walls, 100% infill. Start with supports off and inspect the short bridges.
+
+1. Remove brim, strings and first-layer bulges.
+2. Put the single ear of TEST_B between the two outer ears of TEST_A.
+3. Check alignment with an M3 x 25 mm screw. The screw must pass freely,
+   and the hinge must rotate without spreading or crushing the ears.
+   The design has a 3.4 mm bore and 0.5 mm clearance on each side.
+4. Lay your Premium Pen in the 9.4 mm opening of the extended part 06. It must
+   lift out freely without excessive side-to-side movement; do not force
+   it into a tight clip. This is an open cradle, not a spring clamp.
+5. Check the new lower ring. Slide
+   the pen through from the rear, eraser first. The closed front wall
+   must stop it from sliding out while the ring remains easy to use.
+6. Reuse parts 05 and 06 in the final assembly if the tests pass.
+
+Do not scale the complete model to correct a small tight hole.
+The two hinge coupons are test pieces, not part of the finished stand.
+The approximate fully-solid PLA amount is 10.0 g for all four parts,
+excluding brim/purge, assuming a material density of 1.24 g/cm3.
+
+Read START_HERE.html in the main V2 package before printing/assembling
+all parts. The longer holders and closed ring still need a physical fit test.
