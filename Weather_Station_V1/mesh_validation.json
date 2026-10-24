@@ -1,0 +1,43 @@
+{
+  "01_LCD_Fit_Test.stl": {
+    "triangles": 4608,
+    "welded_vertices": 2296,
+    "open_or_nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "sha256": "38d0f13bbbcd9b26d42464e3bc20983c7d92bbeb65700e882680cc5d55d61dc2"
+  },
+  "02_Fastener_Fit_Test.stl": {
+    "triangles": 2480,
+    "welded_vertices": 1236,
+    "open_or_nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "sha256": "512a0f936525f61c0e19fb0b6e43c152e2bcf75d1e138f1e8eeea6e382e28aa6"
+  },
+  "03_Main_Shell_With_Sensor_Pod.stl": {
+    "triangles": 20060,
+    "welded_vertices": 9682,
+    "open_or_nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "sha256": "cae4c48773b99e8f5ae801a65de33a90118c3ab20137c9ae4de661e49720d83e"
+  },
+  "04_Main_Rear_Cover.stl": {
+    "triangles": 6388,
+    "welded_vertices": 3076,
+    "open_or_nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "sha256": "03c6d50a83762a3b0a74ace30dc0a7f36c081a19ebeea04b119cc1983235faef"
+  },
+  "05_Sensor_Pod_Rear_Cover.stl": {
+    "triangles": 2660,
+    "welded_vertices": 1312,
+    "open_or_nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "sha256": "17a536cb70fd4f8ab10e4d5cf35ab9a9864824717ba61304dd55c702829ba573"
+  },
+  "3mf": {
+    "units": "millimeter",
+    "objects": 5,
+    "geometry_only": true,
+    "all_meshes_closed": true
+  }
+}

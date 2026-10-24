@@ -1,0 +1,23 @@
+# Screw-on Nano holder for the red V9 carrier
+
+This holder is dimensioned for the [CAD carrier](../hardware/cad/output/otto_v9_nosolder_head_carrier.stl) created earlier in this project. **The red printed board in the owner's 18 October 2026 photo appears to have a different outline and cutout. Its hole spacing, thickness, and upper mounting area have not been measured, so this holder is not yet validated for that actual red board.** It is a mechanical prototype: two identical, adjustable rails use four holes in the CAD carrier's grid, and two small cable ties keep the Nano from lifting. The rails do not connect any circuit. The photographed Nano is a USB-C clone with socket strips; its full width and connector clearance have not been measured.
+
+## Print and hardware
+
+- [Two-rail STL, one print](../hardware/cad/output/otto_v9_nano_screw_rails_pair.stl); [editable OpenSCAD source](../hardware/cad/otto_v9_nano_screw_rails.scad); [fit preview with the CAD carrier](../hardware/cad/output/otto_v9_nano_screw_rails_fit.png). The [single-rail STL](../hardware/cad/output/otto_v9_nano_screw_rail.stl) can be used for a low-material hole-alignment trial. Do not print the pair for the photographed board until its holes and sensor clearance are checked.
+- Print the pair **flat, 100% scale**, 0.20 mm layer height, three walls, 20–30% infill, supports off. The pair's bounding box is 46 × 28 × 7.4 mm, with two separate watertight objects.
+- Four **M3 × 8 mm low-profile/button-head machine screws** and four M3 standard nuts. Nylon is preferable around electronics. The screw heads must be no taller than the head's available space above the red carrier; test one dry before fitting the Nano. Do not use long pointed screws.
+- Two narrow nylon cable ties, no more than about 2.5 mm wide. Use only after checking which Nano sockets and button must remain free.
+
+The [official classic Nano](https://docs.arduino.cc/hardware/nano) is 45 × 18 mm. The USB-C clone in the photo can differ, especially across its socket strips. The rail fences can be adjusted to an approximate **16.1–24.9 mm inner gap** using the screw slots. This range is a CAD dimension, not a verified fit to that clone.
+
+## Assemble with all power disconnected
+
+1. Confirm the actual red board has the four mounting holes and clearance shown in the fit preview. The photographed board has not passed this check. Remove it from the blue head; the Nano, sensor, and any battery must be unplugged.
+2. Put the two rails on the **Nano-facing side** of the red carrier, one along each long edge of the Nano. Their raised fences face **inward**, toward the Nano. Align each rail's outer slotted holes with existing carrier-grid holes at `x = ±19.5 mm`; one rail uses the `y = -19.5 mm` row and the other the `y = 13 mm` row. No drilling is needed.
+3. Insert the M3 screws from the **head-facing side** of the red carrier, through its holes and the rail slots. Put the nuts on the visible rail side. Leave them loose enough for the rails to slide.
+4. Place the Nano lengthwise between the fences, with its USB-C connector toward the head's side opening. Move the rails inward until they touch the **outer plastic socket strips** without bending the PCB or pin headers. Tighten the four nuts lightly. The Nano board rests on the red carrier; add thin insulating pads under it only if exposed solder joints cause it to rock.
+5. Choose two matching elongated tie openings on the rails that leave the reset button, USB port, and needed header sockets accessible. Each aligns with an existing **CAD carrier** grid hole even after rail adjustment. Route each tie down through one rail and the carrier, back up through the other rail and carrier, then over the **plastic socket housings**. Put the tie lock on the visible side outside the Nano. Tighten just enough to prevent lifting or sliding; do not crush the headers.
+6. Refit the carrier in the head without power. Check that the HC-SR04 PCB and its wires do not touch a rail, that the USB-C plug inserts fully, and that the head closes without squeezing the Nano or screw heads. If any check fails, remove the holder and measure the interference before changing the OpenSCAD dimensions.
+
+The original head mesh and **CAD carrier** were checked digitally: the nominal rail placement has **no solid overlap with the head mesh**. The photographed red board, sensor, jumper leads, screw heads, and Nano were not available as 3D models, and no physical fit or electrical test was performed. A screw-on holder cannot make the EPLZON copper perfboard solderless; see the [no-solder wiring plan](NO_SOLDER_WIRING.md).

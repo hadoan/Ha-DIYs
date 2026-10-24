@@ -1,0 +1,465 @@
+{
+  "source_file": "weather_station_cad.py",
+  "source_sha256": "89659e2998c8d7fbe78320ad35dc7037c067a01a537e2706fe2035b58d3f80aa",
+  "method": "OpenCascade exact CAD Boolean common volumes; final honeycomb geometry",
+  "units": "millimetres and cubic millimetres",
+  "zero_volume_tolerance_mm3": 0.001,
+  "checks": [
+    {
+      "check": "main_shell_and_sensor_pod valid and one connected solid",
+      "pass": true
+    },
+    {
+      "check": "main_rear_cover valid and one connected solid",
+      "pass": true
+    },
+    {
+      "check": "sensor_pod_rear_cover valid and one connected solid",
+      "pass": true
+    },
+    {
+      "check": "shell versus main rear cover",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "shell versus sensor pod rear cover",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "main rear cover versus sensor pod rear cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "LCD PCB versus main_shell_and_sensor_pod",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "LCD PCB versus main_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "LCD PCB versus sensor_pod_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "LCD bezel versus main_shell_and_sensor_pod",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "LCD bezel versus main_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "LCD bezel versus sensor_pod_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "LCD glass versus main_shell_and_sensor_pod",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "LCD glass versus main_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "LCD glass versus sensor_pod_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "Battery holder versus main_shell_and_sensor_pod",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "Battery holder versus main_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "Battery holder versus sensor_pod_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "21700 cell versus main_shell_and_sensor_pod",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "21700 cell versus main_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "21700 cell versus sensor_pod_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "ESP32 S2 Mini PCB versus main_shell_and_sensor_pod",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "ESP32 S2 Mini PCB versus main_rear_cover",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "ESP32 S2 Mini PCB versus sensor_pod_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "ESP USB versus main_shell_and_sensor_pod",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "ESP USB versus main_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "ESP USB versus sensor_pod_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "ESP chip versus main_shell_and_sensor_pod",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "ESP chip versus main_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "ESP chip versus sensor_pod_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "Charger PCB versus main_shell_and_sensor_pod",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "Charger PCB versus main_rear_cover",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "Charger PCB versus sensor_pod_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "Charge USB versus main_shell_and_sensor_pod",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "Charge USB versus main_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "Charge USB versus sensor_pod_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "Boost PCB versus main_shell_and_sensor_pod",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "Boost PCB versus main_rear_cover",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "Boost PCB versus sensor_pod_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "Boost inductor versus main_shell_and_sensor_pod",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "Boost inductor versus main_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "Boost inductor versus sensor_pod_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "DHT breakout versus main_shell_and_sensor_pod",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "DHT breakout versus main_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "DHT breakout versus sensor_pod_rear_cover",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "DHT11 body versus main_shell_and_sensor_pod",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "DHT11 body versus main_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "DHT11 body versus sensor_pod_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "ESP USB at rear-cover insertion offset +8 mm",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "Charge USB at rear-cover insertion offset +8 mm",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 screw bore 1 shell",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 screw bore 1 cover",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 captive nut pocket 1",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 captive nut entry 1",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 screw bore 2 shell",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 screw bore 2 cover",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 captive nut pocket 2",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 captive nut entry 2",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 screw bore 3 shell",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 screw bore 3 cover",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 captive nut pocket 3",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 captive nut entry 3",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 screw bore 4 shell",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 screw bore 4 cover",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 captive nut pocket 4",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 captive nut entry 4",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 screw bore 5 shell",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 screw bore 5 cover",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 captive nut pocket 5",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 captive nut entry 5",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 screw bore 6 shell",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 screw bore 6 cover",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 captive nut pocket 6",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M3 captive nut entry 6",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M2 LCD bore -1,-1",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M2 LCD bore -1,1",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M2 LCD bore 1,-1",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "M2 LCD bore 1,1",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "battery tie tunnel 1 including both side rails",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "battery tie tunnel 2 including both side rails",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "maximum battery holder envelope versus main_shell_and_sensor_pod",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "maximum battery holder envelope versus main_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "maximum battery holder envelope versus sensor_pod_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "maximum sensor envelope versus main_shell_and_sensor_pod",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "sensor straight connector allowance versus main_shell_and_sensor_pod",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    },
+    {
+      "check": "maximum sensor envelope versus main_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "sensor straight connector allowance versus main_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "maximum sensor envelope versus sensor_pod_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "sensor straight connector allowance versus sensor_pod_rear_cover",
+      "intersection_volume_mm3": 0.0,
+      "pass": true
+    },
+    {
+      "check": "joined Dupont connector duct",
+      "intersection_volume_mm3": 0,
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Geometric check of modeled parts and provisional component envelopes only.",
+    "Does not prove fit of unmeasured real modules, printer tolerances, screw strength, electrical design or thermal performance."
+  ],
+  "elapsed_seconds": 15.79,
+  "source_unchanged_during_check": true,
+  "all_checks_pass": true,
+  "passed_checks": 90,
+  "total_checks": 90
+}
