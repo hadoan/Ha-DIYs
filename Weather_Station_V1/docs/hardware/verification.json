@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-25",
+  "target": "lolin_s2_mini",
+  "framework": "Arduino via PlatformIO Espressif32 7.1.3",
+  "build_command": "uvx --with intelhex --from platformio pio run",
+  "build_directory": "firmware/weather_station_test",
+  "build_verified": true,
+  "host_tests_verified": true,
+  "checks": [
+    "startup and padded 16-character rows",
+    "two-second cadence and timer rollover",
+    "NaN/infinite/invalid values and recovery",
+    "firmware/documentation GPIO agreement",
+    "outer header contact mapping checked against WEMOS V1.0.0 schematic",
+    "relative links",
+    "SVG rendered and visually inspected",
+    "30 prior firmware and design files unchanged"
+  ],
+  "physical_hardware_tested": false,
+  "uploaded": false,
+  "pending_hardware_checks": [
+    "actual DHT11 printed pin order and 3.3V suitability",
+    "LCD controller input thresholds",
+    "LCD backlight current limiting",
+    "VO-ground contrast",
+    "actual VBUS/3V3/GPIO voltages",
+    "reported M3 physical fit",
+    "real readings and error recovery"
+  ],
+  "references": [
+    "https://www.wemos.cc/en/latest/_static/files/sch_s2_mini_v1.0.0.pdf",
+    "https://www.sparkfun.com/datasheets/LCD/HD44780.pdf#page=51",
+    "https://docs.espressif.com/projects/arduino-esp32/en/latest/tutorials/cdc_dfu_flash.html"
+  ],
+  "sha256": {
+    "README.md": "8505ce364b83054e8c44f24b7465cc5167d6e371a9ba49d8b43c031e5240a2d8",
+    "firmware/README.md": "71a797d1c569e64022f0edfc56925b823ab0b7b03594e43d74db484b62741067",
+    "docs/hardware/WIRING.md": "34ad712828d60a965fb73264a5a73957fdaf5c98d2bf350008b4d78a5a2bce4b",
+    "docs/hardware/COMPONENTS.md": "e5e84db9187066c684f849a47911ca14c7b3a833ac30e87352167dbb0be7573b",
+    "docs/hardware/TESTING.md": "db9e9953b9bf4554dbac75766f43cbf938fa57667a36ddfc9a6f251f68637b3c",
+    "docs/hardware/wiring.svg": "1913afca427706e364042d9ffb0add8083af913b679598bb81ec7cecf01bdcee",
+    "firmware/weather_station_test/platformio.ini": "5a11fff7140c2689544716969effaca93923527648ca87f9b343cf05f098efa1",
+    "firmware/weather_station_test/weather_station_test.ino": "56989432ee22574b4a337342424814607881a1e80758273f26608ea7509392bc",
+    "firmware/weather_station_test/display_state.h": "1b33c86bb74a22f151f5ace54b365655f329f0b592230dd25ce8496ebb451a49",
+    "firmware/tests/hardware_test_display_test.cpp": "da21fb92b9160691b690020d0952e30b87df9115178a1fff5b7bc08a038ae0a6",
+    "docs/hardware/wiring.png": "2c08c1ad148f969adad513c45c68e2b8a584481cbe61115c0967ecf651ccfff2"
+  },
+  "build_ram_bytes": 26508,
+  "build_flash_bytes": 258274,
+  "scope": "Offline test software verification; online firmware upload and subsequent hardware reports are recorded separately in firmware/weather_station_online/verification.json."
+}

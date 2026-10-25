@@ -42,18 +42,17 @@ class Readout {
 
   Status status() const { return status_; }
 
-  Frame frame() const {
+  Frame frame(const char* clockRow = "Clock not synced") const {
     Frame result;
     if (status_ == Status::WarmingUp) {
-      snprintf(result.rows[0], 17, "Weather station");
-      snprintf(result.rows[1], 17, "DHT11 warming up");
+      snprintf(result.rows[0], 17, "DHT11 warming up");
     } else if (status_ == Status::SensorError) {
       snprintf(result.rows[0], 17, "DHT11 read error");
-      snprintf(result.rows[1], 17, "Check DATA/power");
     } else {
-      snprintf(result.rows[0], 17, "Temp: %5.1f C", double(temperature_));
-      snprintf(result.rows[1], 17, "Humidity: %3.0f %%", double(humidity_));
+      snprintf(result.rows[0], 17, "T:%4.1fC H:%3.0f%%",
+               double(temperature_), double(humidity_));
     }
+    snprintf(result.rows[1], 17, "%s", clockRow);
     padLine(result.rows[0]);
     padLine(result.rows[1]);
     return result;

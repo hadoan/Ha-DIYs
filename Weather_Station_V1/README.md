@@ -1,4 +1,117 @@
-# Weather Station Enclosure — Agent Implementation Brief
+# DIY Weather Station — room sensor and Berlin weather
+
+An ESP32-S2 Mini V1.0.0 reads a DHT11 and displays room temperature and
+relative humidity on a bare parallel LCD1602A in the existing honeycomb
+enclosure. The current assembly uses removable Dupont jumpers and only the
+ESP32's **two outer header rows**. There is no I²C backpack or potentiometer.
+
+**Current stage (2026-10-25):** offline hardware-test firmware plus a separate
+[Berlin Wi-Fi weather firmware](firmware/weather_station_online/README.md)
+with date/time and Open-Meteo forecasts. USB-C is the only active power source; the INR21700,
+TC4056/TP4056 charger and rocker switch remain disconnected. Real module
+pin order, backlight circuitry, LCD logic compatibility and physical operation
+still require inspection/testing.
+
+The ESP32 build and automated display/timing checks passed; see the
+[offline software verification record](docs/hardware/verification.json).
+The online firmware was uploaded, and USB logs confirmed Wi-Fi, clock sync
+and weather downloads. The user subsequently reported a working LCD and
+DHT11 readings with 5V sensor power. A 5V-powered sensor requires checking
+or translating DATA to 3.3V; those reports do not verify GPIO voltage safety.
+See the [online verification record](firmware/weather_station_online/verification.json).
+
+## Start here
+
+- [Complete wiring, all 16 LCD contacts, and color-coded diagram](docs/hardware/WIRING.md)
+- [Current components, future battery upgrade and unverified details](docs/hardware/COMPONENTS.md)
+- [Beginner-friendly inspection, upload, testing and troubleshooting](docs/hardware/TESTING.md)
+- [Offline Arduino sketch](firmware/weather_station_test/weather_station_test.ino)
+- [Online Berlin weather, Wi-Fi setup and upload](firmware/weather_station_online/README.md)
+
+Choose the offline sketch to check wiring first. The online firmware uses the
+same GPIO map below, reads the room sensor every two seconds and fetches
+Berlin weather about every 15 minutes over HTTPS. Its LCD rotates between
+room readings/date/time, outdoor conditions and today's low/high/rain chance.
+Open-Meteo requires no API key for this personal noncommercial use; see the
+online guide for provider attribution and offline behaviour.
+
+| Signal | GPIO | Signal | GPIO |
+| --- | --- | --- | --- |
+| LCD RS | 3 | LCD E | 5 |
+| LCD D4 | 7 | LCD D5 | 12 |
+| LCD D6 | 33 | LCD D7 | 35 |
+| DHT11 DATA | 37 | | |
+
+LCD VDD uses VBUS (USB 5V); sensor VCC uses 3V3; all grounds are common.
+LCD RW and VO are grounded; LCD pins 7–10 are unused. GPIO signals stay at
+3.3V. Direct LCD signaling assumes the actual 5V controller accepts 3.3V
+inputs; check [the compatibility note](docs/hardware/WIRING.md#33v-signals-into-a-5v-lcd).
+Inspect the DHT11's printed labels before power: **its middle pin is not
+necessarily VCC**. Include the 220Ω backlight resistor unless suitable
+onboard current limiting is confirmed.
+
+## Install, build and upload
+
+From the repository root, build the separate offline test project:
+
+```sh
+cd Weather_Station_V1/firmware/weather_station_test
+uvx --with intelhex --from platformio pio pkg install
+uvx --with intelhex --from platformio pio run
+uvx --with intelhex --from platformio pio device list
+```
+
+This installs the pinned LiquidCrystal 1.0.7, Adafruit DHT sensor library
+1.4.7 and Adafruit Unified Sensor 1.1.15 dependencies. The Arduino framework
+targets `lolin_s2_mini` on Espressif32 7.1.3. Replace the placeholder with your
+actual board port, then upload and monitor:
+
+```sh
+uvx --with intelhex --from platformio pio run --target upload --upload-port /dev/cu.YOUR_BOARD_PORT
+uvx --with intelhex --from platformio pio device monitor --port /dev/cu.YOUR_BOARD_PORT --baud 115200
+```
+
+The [testing guide](docs/hardware/TESTING.md) also explains Arduino IDE,
+native USB CDC, BOOT/RESET and missing-port troubleshooting. After the
+two-second `Weather Station` / `Starting...` message, expect readings such as:
+
+```text
+Temp: 23.0 C
+Humidity: 45%
+```
+
+These are examples, not measured readings. Sampling runs about every two
+seconds without Wi-Fi, credentials or a backend. Invalid reads show
+`DHT11 ERROR` / `Check wiring`, log the problem and retry automatically.
+
+## Existing variants and future power
+
+The earlier [Wi-Fi clock firmware](firmware/README.md), Uno demonstration,
+CAD generators, STL/STEP/3MF files and print documentation are preserved.
+**The clock firmware uses an earlier GPIO map. Do not build/upload from the
+parent `firmware/` folder onto the current test wiring.**
+
+The user reports M3-compatible holes on the actual LCD. The V1 mechanical
+brief below assumes M2 for a generic module; its fastener statements are
+historical design assumptions, not a correction to the reported hardware.
+Check actual mounting fit without forcing screws. This electronics task
+does not alter the enclosure, CAD, print files or battery system.
+
+A later battery version needs one INR21700 in an insulated holder with
+metal contacts, suitable single-cell protection, a verified charger,
+regulated power conversion and a switch. The charger does not produce
+regulated 5V; an XL4005 buck cannot boost one cell to 5V. Charging with a
+connected load and USB power-source isolation need a separate design review.
+See [the future-component plan](docs/hardware/COMPONENTS.md#required-before-a-future-battery-upgrade).
+**Do not connect the battery during this test.**
+
+---
+
+# Weather Station Enclosure — Agent Implementation Brief (V1 reference)
+
+The following existing brief is retained as a mechanical design reference.
+For the current electronics, use the USB test documentation linked above;
+older electrical and fastener assumptions below do not establish actual fit.
 
 ## 1. Task
 
@@ -402,3 +515,13 @@ When implementation is complete, report:
 6. The two fit coupons the user should print first.
 
 The final result should be a complete, reproducible enclosure package with practical assembly access, generous jumper-wire space, and printable honeycomb panels.
+
+## 17. Companion firmware
+
+The separately requested [ESP32-S2 Mini firmware](firmware/README.md) is in
+`firmware/`. It displays real DHT11 temperature and humidity on the bare
+parallel LCD1602A, with a Wi-Fi-synchronized Berlin date/time row, automatic
+sensor retry, and USB logging. Its README
+documents the proposed GPIO assignments, LCD logic translation, and build,
+upload, and verification steps. The mechanical dimensions above remain
+assumptions; firmware compilation does not establish electrical or physical fit.

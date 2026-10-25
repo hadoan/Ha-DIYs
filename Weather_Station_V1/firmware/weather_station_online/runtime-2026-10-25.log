@@ -1,0 +1,24 @@
+Status: Wi-Fi=connected (3), clock=waiting, weather=Syncing time..., DHT11=ERROR
+LCD intended: [Berlin weather  ] [Syncing time... ]
+DHT11 ERROR: check labels, GPIO37, 3V3, GND and DATA pull-up.
+DHT11 ERROR: check labels, GPIO37, 3V3, GND and DATA pull-up.
+DHT11 ERROR: check labels, GPIO37, 3V3, GND and DATA pull-up.
+Berlin: 13.4 C, 62% RH; source open-meteo.com
+DHT11 ERROR: check labels, GPIO37, 3V3, GND and DATA pull-up.
+DHT11 ERROR: check labels, GPIO37, 3V3, GND and DATA pull-up.
+Status: Wi-Fi=connected (3), clock=synced, weather=cached, DHT11=ERROR
+LCD intended: [Berlin 13.4C    ] [open-meteo.com  ]
+DHT11 ERROR: check labels, GPIO37, 3V3, GND and DATA pull-up.
+DHT11 ERROR: check labels, GPIO37, 3V3, GND and DATA pull-up.
+DHT11 ERROR: check labels, GPIO37, 3V3, GND and DATA pull-up.
+DHT11 ERROR: check labels, GPIO37, 3V3, GND and DATA pull-up.
+DHT11 ERROR: check labels, GPIO37, 3V3, GND and DATA pull-up.
+Status: Wi-Fi=connected (3), clock=synced, weather=cached, DHT11=ERROR
+LCD intended: [DHT11 ERROR     ] [25/10/2026 14:25]
+DHT11 ERROR: check labels, GPIO37, 3V3, GND and DATA pull-up.
+DHT11 ERROR: check labels, GPIO37, 3V3, GND and DATA pull-up.
+DHT11 ERROR: check labels, GPIO37, 3V3, GND and DATA pull-up.
+DHT11 ERROR: check labels, GPIO37, 3V3, GND and DATA pull-up.
+Status: Wi-Fi=connected (3), clock=synced, weather=cached, DHT11=ERROR
+LCD intended: [Lo  7C Hi 14C   ] [Rain100% W 16kmh]
+DHT11 ERROR: check labels, GPIO37, 3V3, GND and DATA pull-up.

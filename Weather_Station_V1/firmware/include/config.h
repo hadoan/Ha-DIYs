@@ -16,6 +16,12 @@ constexpr uint8_t kLcdD7 = 7;
 
 constexpr uint32_t kSensorWarmupMs = 2000;
 constexpr uint32_t kSampleIntervalMs = 3000;
+constexpr uint32_t kDisplayRefreshMs = 250;
+constexpr uint32_t kWifiRetryMs = 30000;
+// Europe/Berlin: CET in winter, CEST in summer (POSIX TZ syntax).
+constexpr char kTimezone[] = "CET-1CEST,M3.5.0,M10.5.0/3";
+constexpr char kNtpServer1[] = "pool.ntp.org";
+constexpr char kNtpServer2[] = "time.nist.gov";
 static_assert(kSampleIntervalMs >= 2000, "Allow at least 2 s between DHT reads");
 
 constexpr bool pinsAreUsableAndDistinct() {

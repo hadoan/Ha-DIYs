@@ -1,0 +1,119 @@
+{
+  "verified_at_utc": "2026-10-25T13:06:24.658909+00:00",
+  "scope": "Software builds and host checks plus USB board runtime observation. LCD and DHT hardware checks did not pass.",
+  "board": "lolin_s2_mini / ESP32-S2",
+  "default_build": {
+    "success": true,
+    "ram_static_bytes": 52716,
+    "flash_bytes": 875966,
+    "scope": "Earlier build before additional USB status diagnostics."
+  },
+  "configured_build": {
+    "success": true,
+    "credentials": "Temporary isolated build using explicitly fake placeholders; temporary project removed.",
+    "ram_static_bytes": 52724,
+    "flash_bytes": 876422,
+    "scope": "Earlier build before additional USB status diagnostics."
+  },
+  "host_checks": {
+    "success": true,
+    "compiler_flags": "-std=c++11 -Wall -Wextra -Werror -fsanitize=address,undefined",
+    "coverage": [
+      "complete and malformed/missing/null/out-of-range JSON",
+      "unit and timestamp rejection",
+      "unchanged output after parse failure",
+      "cache stale at 30 minutes and expired at 2 hours using source and receipt age",
+      "64-bit uptime beyond 49 days",
+      "exponential backoff and numeric Retry-After scheduling",
+      "16-column LCD and extreme values",
+      "sensor-error screen keeps date/time",
+      "provider credit and old-day forecast display",
+      "Berlin spring and autumn DST transitions"
+    ]
+  },
+  "live_api_check": {
+    "status": 200,
+    "bytes": 745,
+    "now": 1792933415,
+    "tls": "TLS1.2 verified with bundled roots",
+    "url": "https://api.open-meteo.com/v1/forecast?latitude=52.52437&longitude=13.41053&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m,is_day&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max&forecast_days=1&temperature_unit=celsius&wind_speed_unit=kmh&timeformat=unixtime&timezone=Europe%2FBerlin",
+    "transfer_encoding": null,
+    "content_length": null,
+    "http_request": "HTTP/1.0"
+  },
+  "live_payload_parsed_by_firmware_parser": true,
+  "live_check_location": "Host computer; not the ESP32",
+  "wifi_header_git_ignored": true,
+  "preexisting_source_and_design_files_preserved": 31,
+  "pending": [
+    "Verify DHT11 DATA voltage compatibility with reported 5V sensor power",
+    "Wi-Fi reconnect test on hardware"
+  ],
+  "sha256": {
+    "firmware/tests/fixtures/berlin_weather.json": "ef166c253b774e64f806470382840a1de5541817a3b6f0696724683859650aae",
+    "firmware/tests/weather_online_test.cpp": "4c4c99dd0d624d25ce47d02d018139eced1ad1481a7810aff292bad62f4b0a05",
+    "firmware/weather_station_online/README.md": "b59942ea60a66c801a55a8ac314bbb273275187a875cc6180cd00ae77da5defc",
+    "firmware/weather_station_online/certs/root_ca.pem": "0cd98d2dd7a71afe5e2e93673933f15254c5a41a9be4682f27ec582e72c52ce0",
+    "firmware/weather_station_online/main.cpp": "3a7d7df7a92e138527470c708f5a8b6e9fdae7d10f431989a47fe7fe963f2c94",
+    "firmware/weather_station_online/platformio.ini": "bed3f527bc180040d68108ee9b043574f0be4a9c7917d48095ff179cdd75c886",
+    "firmware/weather_station_online/settings.h": "b9037572184b6eef937093ab3bb8aa457163d3c64f83f2b6075d86d8f33720db",
+    "firmware/weather_station_online/weather_json.h": "59602329931c06f94a010bf4e2df6f350fd81d647bc5507537f7f9042104f710",
+    "firmware/weather_station_online/weather_model.h": "c0b12e8e0621cb36effcc5662a8184f98bdafab35fdc836895f6c12f6c0b1511",
+    "firmware/weather_station_online/wifi_config.example.h": "8381a6a229dde467bf289a4410a808508aed20b136ed464045c67d71a42eed95",
+    "firmware/weather_station_online/runtime-2026-10-25.log": "faf44163952aa089534f1f348dd4330d88fedb7a5c3284befd3b5623217daf9f"
+  },
+  "local_credential_build": {
+    "success": true,
+    "verified_at_utc": "2026-10-25T13:09:41.051914+00:00",
+    "credentials": "Retrieved from the current network Keychain item into owner-only Git-ignored wifi_config.h; credentials excluded from this record.",
+    "uploaded": false,
+    "scope": "Earlier build before additional USB status diagnostics."
+  },
+  "latest_online_build": {
+    "success": true,
+    "ram_static_bytes": 52732,
+    "flash_bytes": 876782,
+    "uploaded": true,
+    "port": "/dev/cu.usbmodem01",
+    "chip": "ESP32-S2FNR2"
+  },
+  "board_runtime": {
+    "observed_at_utc": "2026-10-25T13:27:38.999043+00:00",
+    "evidence": "runtime-2026-10-25.log",
+    "wifi_connected": true,
+    "ntp_synced": true,
+    "weather_https_download_and_parse": true,
+    "dht_valid_readings": false,
+    "lcd_user_report": "Blank screen or blocks",
+    "lcd_intended_text_logged": true,
+    "note": "Serial text is not physical display verification. A separate LCD-only diagnostic is being uploaded."
+  },
+  "page_rotation_update": {
+    "verified_at_utc": "2026-10-25T13:52:37.031205+00:00",
+    "page_seconds": 15,
+    "previous_page_seconds": 5,
+    "build_success": true,
+    "upload_success": true,
+    "port": "/dev/cu.usbmodem01",
+    "ram_static_bytes": 52732,
+    "flash_bytes": 876782,
+    "runtime_confirmation": "Unavailable: USB connection dropped after successful upload; no ESP USB port found on rescan."
+  },
+  "credential_cleanup": {
+    "verified_at_utc": "2026-10-25T14:08:29.757638+00:00",
+    "saved_credentials_removed": true,
+    "local_header_reset_to_empty_example": true,
+    "credential_containing_build_artifacts_removed": true,
+    "exact_password_scan_clean": true,
+    "password_free_build_success": true,
+    "ram_static_bytes": 52724,
+    "flash_bytes": 876354,
+    "host_test_suites_passed": 3,
+    "board_reflashed_during_cleanup": false
+  },
+  "subsequent_user_hardware_report": {
+    "lcd": "working",
+    "dht11": "working with 5V sensor power",
+    "data_voltage_compatibility": "not measured or verified; see wiring guide"
+  }
+}
