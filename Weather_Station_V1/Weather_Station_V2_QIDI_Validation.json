@@ -1,0 +1,121 @@
+{
+  "original_file": "Weather_Station_V2_Final_Parts_Original.3mf",
+  "original_sha256": "92a34971d8e6425cb307cf3a6980c4b2096011abc8cd1503879cb330bd2d2bf2",
+  "fixed_file": "Weather_Station_V2_Final_Parts.3mf",
+  "fixed_sha256": "40b52e679af529d9fb1960909a6a24aa4df7f83eaeabd97a12ae26ef596a608e",
+  "qidi_version": "02.07.02.60",
+  "supports": {
+    "enabled": true,
+    "type": "tree(auto)",
+    "build_plate_only": "0",
+    "top_z_gap_mm": "0.2",
+    "xy_gap_mm": "0.35"
+  },
+  "slice_result": {
+    "error_string": "Success.",
+    "export_time": 670,
+    "layer_height": 0.20000000298023224,
+    "plate_index": 0,
+    "prepare_time": 65,
+    "return_code": 0,
+    "sliced_plates": [
+      {
+        "feature_type_times": {
+          "Bottom surface": 807.015869140625,
+          "Bridge": 250.8484649658203,
+          "Custom": 112.98762512207031,
+          "Flush": 35.0,
+          "Gap infill": 225.6364288330078,
+          "Inner wall": 1794.6165771484375,
+          "Internal solid infill": 1877.0958251953125,
+          "Outer wall": 3148.9130859375,
+          "Overhang wall": 83.30286407470703,
+          "Sparse infill": 172.33084106445312,
+          "Support": 500.08880615234375,
+          "Support interface": 37.49877166748047,
+          "Top surface": 666.720458984375,
+          "Travel": 3141.890625,
+          "Undefined": 3129.586669921875
+        },
+        "filament_change_times": 0,
+        "filaments": [
+          {
+            "filament_id": "QD_4_1_7",
+            "id": 1,
+            "main_used_g": 91.0232162475586,
+            "total_used_g": 91.0232162475586
+          }
+        ],
+        "generate_support_material_time": 2492,
+        "id": 1,
+        "infill_time": 701,
+        "layer_filament_change": 0,
+        "main_predication": 12670.01171875,
+        "make_perimeters_time": 754,
+        "obj_cached_cnt": 0,
+        "objects": [
+          {
+            "bbox": {
+              "depth": 100.0,
+              "height": 53.79999923706055,
+              "width": 190.0,
+              "x": 39.0,
+              "y": 55.0,
+              "z": -1.8530272427597083e-08
+            },
+            "id": 5,
+            "name": "02_Main_Shell",
+            "triangle_count": 16598
+          },
+          {
+            "bbox": {
+              "depth": 100.0,
+              "height": 6.199999809265137,
+              "width": 140.0,
+              "x": 39.0,
+              "y": 165.0,
+              "z": -4.632568550988481e-09
+            },
+            "id": 9,
+            "name": "03_Main_Rear_Cover",
+            "triangle_count": 9216
+          },
+          {
+            "bbox": {
+              "depth": 74.0,
+              "height": 5.199999809265137,
+              "width": 42.0,
+              "x": 239.0,
+              "y": 55.0,
+              "z": -4.632568550988481e-09
+            },
+            "id": 13,
+            "name": "04_Sensor_Rear_Cover",
+            "triangle_count": 3140
+          },
+          {
+            "bbox": {
+              "depth": 26.0,
+              "height": 1.600000023841858,
+              "width": 46.0,
+              "x": 189.0,
+              "y": 165.0,
+              "z": 7.907108301452581e-11
+            },
+            "id": 17,
+            "name": "05_Switch_Insert_Blank",
+            "triangle_count": 1196
+          }
+        ],
+        "sliced_time": 6592,
+        "sliced_time_with_cache": 2382,
+        "total_predication": 12840.591796875,
+        "triangle_count": 30150,
+        "warning_message": ""
+      }
+    ],
+    "sparse_infill_density": 15.0,
+    "wall_loops": 2
+  },
+  "physical_print_verified": false
+}
